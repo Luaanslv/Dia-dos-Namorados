@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosso Amor ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating hearts particles -->
+<div id="particles"></div>
+
+<!-- Music Player -->
+<div class="music-bar" id="musicBar">
+  <button class="music-toggle" id="musicToggle" onclick="toggleMusic()" aria-label="Tocar/Pausar música">▶</button>
+  <div class="music-info">
+    <div style="font-size:0.7rem; color:rgba(255,255,255,0.5); margin-bottom:1px;">♪ tocando</div>
+    <div class="music-title">É o brabo tocando</div>
+    <div style="color:rgba(255,255,255,0.4); font-size:0.7rem;">Senti o clima gata!</div>
+  </div>
+  <div class="music-waves" id="musicWaves">
+    <div class="wave-bar paused"></div>
+    <div class="wave-bar paused"></div>
+    <div class="wave-bar paused"></div>
+    <div class="wave-bar paused"></div>
+    <div class="wave-bar paused"></div>
+  </div>
+</div>
+
+<!-- Nav dots -->
+<nav class="nav-dots" aria-label="Navegação rápida">
+  <button class="nav-dot active" onclick="scrollToSection(0)" aria-label="Início"></button>
+  <button class="nav-dot" onclick="scrollToSection(1)" aria-label="Mensagem"></button>
+  <button class="nav-dot" onclick="scrollToSection(2)" aria-label="Fotos"></button>
+  <button class="nav-dot" onclick="scrollToSection(3)" aria-label="Linha do tempo"></button>
+  <button class="nav-dot" onclick="scrollToSection(4)" aria-label="Carta"></button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="sec0">
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-content">
+    <p class="hero-date">12 de junho · Dia dos Namorados</p>
+    <h1 class="hero-title">Com Amor,<br>Para Sempre</h1>
+    <p class="hero-sub">Cada dia ao seu lado é uma nova página da história mais bonita que já vivi.</p>
+    <div class="hero-divider"><span class="hero-heart">❤</span></div>
+    <div class="scroll-cta">
+      <span>Explore nossa história</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MESSAGE ─── -->
+<section class="message-section" id="sec1">
+  <div class="message-inner">
+    <div class="message-visual">
+      <div class="photo-frame">
+        <img src="img/copos.jpg" alt="Casal apaixonado">
+        <div class="photo-badge">❤</div>
+      </div>
+      <div class="message-quote">
+        <p>Você é o lar que sempre procurei e nunca soube nomear — até te encontrar.</p>
+      </div>
+    </div>
+    <div>
+      <p class="section-label">Uma mensagem especial</p>
+      <h2 class="section-title">Você faz tudo<br><em>valer a pena</em></h2>
+      <p class="section-text">
+        Desde o primeiro olhar, algo mudou em mim. Você trouxe cor para os dias cinzas, risos para as horas difíceis, e paz para a minha alma inquieta.
+      </p>
+      <p class="section-text" style="margin-top:1rem;">
+        Hoje e sempre, quero que saiba: amar você é o melhor que já me aconteceu.
+      </p>
+      <div style="margin-top:2rem; display:flex; align-items:center; gap:0.8rem;">
+        <div style="width:48px; height:1px; background:var(--rose-light);"></div>
+        <span style="font-family:'Dancing Script',cursive; font-size:1.4rem; color:var(--rose);">Te amo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section class="gallery-section" id="sec2">
+  <div class="gallery-header">
+    <p class="section-label">Momentos capturados</p>
+    <h2 class="section-title">Nossa <em>história</em> em fotos</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="img/parque.jpg" alt="Parque juntos">
+      <div class="gallery-overlay"><span class="gallery-caption">Caminhadas nos parques</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="img/passeia.jpg" alt="Caminhada juntos">
+      <div class="gallery-overlay"><span class="gallery-caption">Nossos roles</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="img/Natal.jpg" alt="Primeiro Natal juntos">
+      <div class="gallery-overlay"><span class="gallery-caption">Primeiro Natal juntos</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="img/PrimeiroEncontro.jpg" alt="Primeiro encontro">
+      <div class="gallery-overlay"><span class="gallery-caption">Nosso primeiro encontro</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="img/lingua.jpg" alt="Momento especial">
+      <div class="gallery-overlay"><span class="gallery-caption">Um momento especial</span></div>
+    </div>
+  </div>
+</section>
+<!-- ─── LOVE LETTER ─── -->
+<section class="letter-section" id="sec4">
+  <div class="letter-inner">
+    <p class="letter-label">Uma carta de amor</p>
+    <h2 class="letter-title">Para você,<br>meu amor</h2>
+    <p class="letter-body">
+      Não existem palavras suficientes no dicionário para descrever o que sinto por você.
+      Mas se pudesse resumir numa só frase, seria esta:<br><br>
+      <em>Com você, a vida faz sentido.</em><br><br>
+      Feliz Dia dos Namorados. Hoje, amanhã, e em todos os dias que ainda estão por vir.
+    </p>
+    <div class="letter-sig">Para sempre seu ❤</div>
+    <div class="letter-heart-row">
+      <span>💕</span><span>💗</span><span>💕</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>Feito com ❤ · 12 de Junho · Dia dos Namorados</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- Hidden audio (uses public domain ambient piano) -->
+<audio id="bgMusic" loop>
+  <source src="audio/50 Cent - Best Friend Official Music Video ft Olivia.mp3" type="audio/ogg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
